@@ -8,6 +8,7 @@ import LayersIcon from '@material-ui/icons/Layers';
 import SchoolIcon from '@material-ui/icons/School';
 import ShareIcon from '@material-ui/icons/Share';
 import { Switch, Route, Link } from 'react-router-dom';
+import { HashLink } from "react-router-hash-link";
 
 const theme = createTheme();
 const linkStyles = {
@@ -32,42 +33,42 @@ export const DrawerMenu = () => {
             {/* </Fab> */}
             <Drawer anchor='left' open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} style={{ width: '300px'}}>
                 <List>
-                    <Link to="#home" style={linkStyles}>
+                    <HashLink to="#home" style={linkStyles}>
                         <ListItem button>
                             <ListItemIcon><HomeIcon /></ListItemIcon>
                             <ListItemText primary={"Home"} />
                         </ListItem>
-                    </Link>
-                    <Link to="#profile" style={linkStyles}>
+                    </HashLink>
+                    <HashLink to="#profile" style={linkStyles}>
                         <ListItem button>
                             <ListItemIcon><PersonIcon /></ListItemIcon>
                             <ListItemText primary={"Profile"} />
                         </ListItem>
-                    </Link>
-                    <Link to="#exprience" style={linkStyles}>
+                    </HashLink>
+                    <HashLink to="#exprience" style={linkStyles}>
                         <ListItem button>
                             <ListItemIcon><VerifiedUserIcon /></ListItemIcon>
                             <ListItemText primary={"Experience"} />
                         </ListItem>
-                    </Link>
-                    <Link to="#technology" style={linkStyles}>
+                    </HashLink>
+                    <HashLink to="#technology" style={linkStyles}>
                         <ListItem button>
                             <ListItemIcon><LayersIcon /></ListItemIcon>
                             <ListItemText primary={"Technology"} />
                         </ListItem>
-                    </Link>
-                    <Link to="#education" style={linkStyles}>
+                    </HashLink>
+                    <HashLink to="#education" style={linkStyles}>
                         <ListItem button>
                             <ListItemIcon><SchoolIcon /></ListItemIcon>
                             <ListItemText primary={"Education"} />
                         </ListItem>
-                    </Link>
-                    <Link to="#connect" style={linkStyles}>
+                    </HashLink>
+                    <HashLink to="#connect" style={linkStyles}>
                         <ListItem button>
                             <ListItemIcon><ShareIcon /></ListItemIcon>
                             <ListItemText primary={"Connect"} />
                         </ListItem>
-                    </Link>
+                    </HashLink>
                 </List>
             </Drawer>
         </div>

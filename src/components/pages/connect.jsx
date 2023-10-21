@@ -2,7 +2,7 @@ import { Typography } from "@material-ui/core";
 
 const Connect = () => {
     return (
-        <div>
+        <div id='connect'>
             <Typography>
                 Connect
             </Typography>

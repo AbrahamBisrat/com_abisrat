@@ -11,9 +11,9 @@ const frontPageStyle = {
 const FrontPage = () => {
     
     return (
-        <div style={frontPageStyle}>
+        <div style={frontPageStyle} id='home'>
             <Typography align='center' variant='h2' >
-                <Box sx={{ fontWeight: '400', textShadow: '2px 1px 2px black'}}>
+                <Box sx={{ fontWeight: '400', textShadow: '1px 1px 1px black'}}>
                     Abraham Bisrat
                 </Box>
             </Typography>

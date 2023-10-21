@@ -2,7 +2,7 @@ import { Typography } from "@material-ui/core";
 
 const Experience = () => {
     return (
-        <div>
+        <div id='experience'>
             <Typography>
                 Experience
             </Typography>

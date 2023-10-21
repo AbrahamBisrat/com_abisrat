@@ -2,7 +2,7 @@ import { Typography } from "@material-ui/core";
 
 const Technology = () => {
     return (
-        <div>
+        <div id='technology'>
             <Typography>
                 Technology
             </Typography>
