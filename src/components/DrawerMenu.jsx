@@ -22,55 +22,63 @@ const iconStyle = {
 };
 
 export const DrawerMenu = () => {
-    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const [open, setOpen] = useState(false);
+
+    const toggleDrawer = (inOpen) => (event) => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+        return;
+        }
+        setOpen(inOpen);
+    };
 
     return (
-        <div>
-            {/* <Fab size='large' aria-lable='logo' style={{ position: 'fixed'}}> */}
-                <IconButton style={iconStyle} size='large' edge='start' color='inherit' aria-label='logo' onClick={() => setIsDrawerOpen(true)}>
-                    <MenuIcon />
-                </IconButton>
-            {/* </Fab> */}
-            <Drawer anchor='left' open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} style={{ width: '300px'}}>
-                <List>
-                    <HashLink to="#home" style={linkStyles}>
-                        <ListItem button>
-                            <ListItemIcon><HomeIcon /></ListItemIcon>
-                            <ListItemText primary={"Home"} />
-                        </ListItem>
-                    </HashLink>
-                    <HashLink to="#profile" style={linkStyles}>
-                        <ListItem button>
-                            <ListItemIcon><PersonIcon /></ListItemIcon>
-                            <ListItemText primary={"Profile"} />
-                        </ListItem>
-                    </HashLink>
-                    <HashLink to="#exprience" style={linkStyles}>
-                        <ListItem button>
-                            <ListItemIcon><VerifiedUserIcon /></ListItemIcon>
-                            <ListItemText primary={"Experience"} />
-                        </ListItem>
-                    </HashLink>
-                    <HashLink to="#technology" style={linkStyles}>
-                        <ListItem button>
-                            <ListItemIcon><LayersIcon /></ListItemIcon>
-                            <ListItemText primary={"Technology"} />
-                        </ListItem>
-                    </HashLink>
-                    <HashLink to="#education" style={linkStyles}>
-                        <ListItem button>
-                            <ListItemIcon><SchoolIcon /></ListItemIcon>
-                            <ListItemText primary={"Education"} />
-                        </ListItem>
-                    </HashLink>
-                    <HashLink to="#connect" style={linkStyles}>
-                        <ListItem button>
-                            <ListItemIcon><ShareIcon /></ListItemIcon>
-                            <ListItemText primary={"Connect"} />
-                        </ListItem>
-                    </HashLink>
-                </List>
+        <Box sx={{ display: 'flex' }}>
+            <IconButton style={iconStyle} size='large' edge='start' 
+                color='inherit' aria-label='logo' onClick={toggleDrawer(true)}>
+                <MenuIcon />
+            </IconButton>
+            <Drawer anchor='left' open={open} onClose={toggleDrawer(false)} style={{ width: '300px'}}>
+                <Box role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)} >
+                    <List>
+                        <HashLink to="#home" style={linkStyles}>
+                            <ListItem button>
+                                <ListItemIcon><HomeIcon /></ListItemIcon>
+                                <ListItemText primary={"Home"} />
+                            </ListItem>
+                        </HashLink>
+                        <HashLink to="#profile" style={linkStyles}>
+                            <ListItem button>
+                                <ListItemIcon><PersonIcon /></ListItemIcon>
+                                <ListItemText primary={"Profile"} />
+                            </ListItem>
+                        </HashLink>
+                        <HashLink to="#exprience" style={linkStyles}>
+                            <ListItem button>
+                                <ListItemIcon><VerifiedUserIcon /></ListItemIcon>
+                                <ListItemText primary={"Experience"} />
+                            </ListItem>
+                        </HashLink>
+                        <HashLink to="#technology" style={linkStyles}>
+                            <ListItem button>
+                                <ListItemIcon><LayersIcon /></ListItemIcon>
+                                <ListItemText primary={"Technology"} />
+                            </ListItem>
+                        </HashLink>
+                        <HashLink to="#education" style={linkStyles}>
+                            <ListItem button>
+                                <ListItemIcon><SchoolIcon /></ListItemIcon>
+                                <ListItemText primary={"Education"} />
+                            </ListItem>
+                        </HashLink>
+                        <HashLink to="#connect" style={linkStyles}>
+                            <ListItem button>
+                                <ListItemIcon><ShareIcon /></ListItemIcon>
+                                <ListItemText primary={"Connect"} />
+                            </ListItem>
+                        </HashLink>
+                    </List>
+                </Box>
             </Drawer>
-        </div>
+        </Box>
     )
 }
