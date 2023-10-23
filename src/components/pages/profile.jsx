@@ -1,8 +1,6 @@
 import { Typography, Paper, Avatar, Box, styled } from "@material-ui/core";
+const lightBlue = '#2f5975';
 
-const profileStyle = {
-    // height: '100vh',
-}
 const profileTextStyle = {
     height: '30vh',
     backgroundColor: '#284b63',
@@ -11,7 +9,7 @@ const profileTextStyle = {
     padding: '10vh',
 }
 const profileDetailStyle = {
-    backgroundColor: '#2f5975',
+    backgroundColor: lightBlue,
     height: '100vh',
 }
 const CenteredPaper = styled(Paper)(({ theme }) => ({
@@ -19,49 +17,61 @@ const CenteredPaper = styled(Paper)(({ theme }) => ({
     justifyContent: 'center',
     alignItems: 'center',
     height: '40vh',
-    backgroundColor: '#2f5975',
+    backgroundColor: '',
 }));
-const profileDetailsTextStyle  = {
-    backgroundColor: '#2f5975',
-    display: 'flex',
-    justifyContent: 'center',
-    borderRight: '1',
-    borderColor: 'red'
-}
 const promptTextStyle = {
-    border: '1px 0 solid red'
+    border: '1px 0 solid red',
+    color: '#ffffffb3',
+    flex: '1',
+    textAlign: 'right',
+    marginRight: '1vw',
 }
-
+const avatarStyles = {
+    width:'auto', 
+    height: '100%',
+    border: '3px solid #fff',
+}
+const profileAnswerStyle = {
+    flex: '1',
+    textAlign: 'left',
+    marginLeft: '1vw',
+    color: '#ffffff',
+    paddingLeft: '2vw',
+    borderLeft: '1px Solid #437799',
+    marginBottom: '1vh',
+}
+const PromptAndAnswer = ({prompt, answer}) => {
+    return (
+        <Box display="flex" justifyContent="center">
+          <div style={promptTextStyle}>
+            <Typography>{prompt}</Typography>
+          </div>
+          <div style={profileAnswerStyle}>
+            <Typography>{answer}</Typography>
+          </div>
+        </Box>
+    );
+};
 const Profile = () => {
     return (
-        <div style={profileStyle} id='profile'>
-            <Paper square style={profileTextStyle}>
+        <div id='profile'>
+            <Paper square style={profileTextStyle} id="justBelowFront">
                 <Typography variant='h3'>
                     Profile
                 </Typography>
             </Paper>
             <Paper square style={{backgroundColor:'#2f5975', height:'5vh'}}></Paper>
             <Paper square  style={profileDetailStyle}>
-                <CenteredPaper square elevation={0}>
-                    <Avatar src="/images/avatar.jpg" style={{ width:'auto', height: '100%', border: '3px solid #fff'}} />
+                <CenteredPaper square elevation={0} style={{backgroundColor: lightBlue}}>
+                    <Avatar src="/images/avatar.jpg" style={avatarStyles} />
                 </CenteredPaper>
                 <Paper square elevation={0} style={{backgroundColor:'#2f5975', height:'5vh'}}/>
-                <Paper square style={profileDetailsTextStyle}>
-                    <div style={{display: 'flex', justifyContent: 'center', flexWrap:'true'}}>
-                        <div style={promptTextStyle}>
-                            <Typography variant='h5'>
-                                Name
-                            </Typography>
-                        </div>
-                        <div style={{ marginLeft: '2vw' }}>
-                            <Typography>
-                                Abraham Bisrat
-                            </Typography>
-                        </div>
-                    </div>
-                </Paper>
+                {/* profile details text */}
+                <PromptAndAnswer prompt='Name' answer='Abraham Bisrat'/>
+                <PromptAndAnswer prompt='Birth Day' answer='2/12/2010'/>
+                <PromptAndAnswer prompt='Titles' answer='Software Engineer'/>
+                <PromptAndAnswer prompt='Locations' answer='Seattle Washington, US'/>
             </Paper>
-            
         </div>
     );
 };

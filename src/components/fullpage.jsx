@@ -1,4 +1,3 @@
-import { Typography } from "@material-ui/core"
 import FrontPage from "./pages/welcome";
 import Profile from "./pages/profile";
 import Experience from "./pages/experience";

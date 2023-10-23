@@ -1,4 +1,4 @@
-import { createTheme, Drawer, List, ListItem, ListItemIcon, ListItemText, Box, Typography, IconButton, makeStyles } from "@material-ui/core";
+import { createTheme, Drawer, List, ListItem, ListItemIcon, ListItemText, Box, IconButton } from "@material-ui/core";
 import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import MenuIcon from "@material-ui/icons/Menu"
@@ -38,12 +38,6 @@ export const DrawerMenu = () => {
         return;
         }
         setOpen(inOpen);
-    };
-    const paperStyle = {
-        width: "15%", // Set the width for desktop
-        "@media (max-width: 600px)": {
-            width: "40%", // Set the width for mobile
-        },
     };
 
     return (
