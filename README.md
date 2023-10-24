@@ -20,3 +20,10 @@ Day3: Sunday, Oct 22, 2023
 - Started Validations
 - Backend started
 - researching Blogs for inspiration
+
+Day4: Monday, Oct 23, 2023
+
+- Set up CloudFront - Done
+- S3 static hosting - Done
+- Route 53 - Configurations - Done
+- Certificates - Done

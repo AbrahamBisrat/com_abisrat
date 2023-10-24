@@ -71,7 +71,6 @@ const Connect = () => {
                     </Typography>
                 </Box>
             </Paper>
-
             <Paper elevation={1} style={paperStyles} >
                 <Typography component="h1" variant="h5" style={{ margin: '1rem 0' }}>
                     Mail
