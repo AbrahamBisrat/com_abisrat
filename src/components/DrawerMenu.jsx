@@ -15,9 +15,9 @@ const linkStyles = {
     color: theme.palette.text.primary,
 };
 const iconStyle = {
-    margin: '1%',
+    margin: '3%',
     position: 'fixed',
-    zIndex: '1000'
+    zIndex: '1000',
 };
 const MenuItem = ({ icon, text, to }) => {
     return (
@@ -44,9 +44,8 @@ export const DrawerMenu = () => {
         <Box sx={{ display: 'flex', backgroundColor: '#e6e6e6'}}>
             <IconButton style={iconStyle} edge='start' 
                 color='inherit' aria-label='logo' onClick={toggleDrawer(true)}>
-                <MenuIcon />
+                <MenuIcon style={{ height: '2.5rem', width: '2.5rem' }}/>
             </IconButton>
-            {/* PaperProps={{ style: { width: '15%' } }}  drawer width*/} 
             <Drawer transitionDuration={450} anchor='left' 
                 open={open} onClose={toggleDrawer(false)}>
                 <Box role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)} >

@@ -28,7 +28,7 @@ const promptTextStyle = {
 }
 const avatarStyles = {
     width:'auto', 
-    height: '100%',
+    height: '20rem',
     border: '3px solid #fff',
 }
 const profileAnswerStyle = {

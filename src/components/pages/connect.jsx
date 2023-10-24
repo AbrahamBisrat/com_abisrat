@@ -2,6 +2,7 @@ import { Typography, Box, Paper, Button, TextField, TextareaAutosize, createThem
 import { useState } from 'react';
 import CircularProgress from "@material-ui/core/CircularProgress";
 import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
+// import TaskAltIcon from '@mui/icons-material/TaskAlt';
 
 const theme = createTheme();
 const profileTextStyle = {
@@ -13,7 +14,7 @@ const profileTextStyle = {
 };
 const paperStyles = {
     boxShadow: 3,
-    height: '35vh',
+    height: '40vh',
     width: '70vw',
     margin: '0 auto',
     marginTop: 8,
@@ -71,19 +72,19 @@ const Connect = () => {
                 </Box>
             </Paper>
 
-            <Paper square elevation={4} style={paperStyles} >
-                <Typography component="h1" variant="h5">
+            <Paper elevation={1} style={paperStyles} >
+                <Typography component="h1" variant="h5" style={{ margin: '1rem 0' }}>
                     Mail
                 </Typography>
                 {sending ? (
                     <Box style={{ ...centered }}>
-                        <div> Sending... </div>
+                        <div style={{ margin: '1rem 0' }}> Sending... </div>
                         <CircularProgress />
                     </Box>
                 ) : (
                     <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }} style={ innerFormStyles }>
                         <TextField margin="normal" required id="email" label="Email" 
-                            name="email" autoComplete="email" autoFocus />
+                            name="email" autoComplete="email" />
                         
                         <TextField margin="normal" name="subject" label="Subject" type="text" id="subject" />
                         
@@ -94,10 +95,11 @@ const Connect = () => {
                             Send
                         </Button>
                     </Box>
-                ) }
+                )}
                 {sent && (
                     <Box style={{height: '100%', ...centered}}>
                         <AssignmentTurnedInIcon style={{ height: '5rem', width: '5rem', margin: '0 auto', }}/>
+                        
                         <Typography variant='h5'>
                             Got it, I will get back to you as soon as possible.
                         </Typography>
