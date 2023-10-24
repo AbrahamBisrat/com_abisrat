@@ -1,27 +1,22 @@
-# Personal Website
+# Personal Website -> https://
 
-## Daily updates
+Day1: Friday, Oct 20, 2023
 
-## Fri, Oct 20
+- Created GH repo
+- Analyzed project spec
+- Setting base React Project
+- Coming up with Design for Front End
 
-### Created git repo.
+Day2: Saturday, Oct 21, 2023
 
-### Analyzed project specification
+- Bought Domain and setting up certificates
+- Setting Up DNS configurations
+- React app in progress
 
-### checked all requirements for completion
+Day3: Sunday, Oct 22, 2023
 
-### Began the FrontEnd
-
-## Sat, Oct 21 -
-
-## Sun, Oct 22 -
-
-## Mon, Oct 23 -
-
-## Tue, Oct 24 -
-
-## Wed, Oct 25 -
-
-## Thur, Oct 26 -
-
-## Fri, Oct 27 -
+- Finished Front end with React
+- Some features still ongoing
+- Started Validations
+- Backend started
+- researching Blogs for inspiration
