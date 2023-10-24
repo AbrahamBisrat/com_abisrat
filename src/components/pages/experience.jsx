@@ -1,37 +1,6 @@
 import { Paper, Box, Typography, styled, Avatar } from "@material-ui/core";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
-const languages = [
-    'apple.svg',
-    'aws.svg',
-    'bootstrap.svg',
-    'cassandra.svg',
-    'docker.svg',
-    'git.svg',
-    'gradle.svg',
-    'graphql.svg',
-    'hibernate.svg',
-    'html.svg',
-    'j2ee.svg',
-    'java.svg',
-    'javascript.svg',
-    'jenkins.svg',
-    'jquery.svg',
-    'kafka.svg',
-    'linux.svg',
-    'material-ui.svg',
-    'maven.svg',
-    'node.svg',
-    'oracle.svg',
-    'postgresql.svg',
-    'postman.svg',
-    'python.svg',
-    'redux.svg',
-    'rust.svg',
-    'tomcat.svg',
-    'typescript.svg'
-];
-
 const lighterSame = '#86aaaa';
 const Container = styled('div')({
     display: 'flex',
@@ -41,11 +10,11 @@ const Container = styled('div')({
 });
 const LeftSection = styled('div')({
     flex: '1 0 80%',
-    border: '1px dashed black'
+    // border: '1px dashed black'
 });
 const RightSection = styled('div')({
     flex: '1 0 20%',
-    border: '1px dashed black'
+    // border: '1px dashed black'
 });
 const logoStyle = {
     padding: '4%',
@@ -53,51 +22,69 @@ const logoStyle = {
     height:'auto',
     margin: '10% auto',
 };
+const leftSectionStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    // border: '1px dashed red',
+    padding: '0 4vw',
+};
+const JobDescription = ({label}) => {
+    return (
+        <>
+            <li style={{display: 'flex'}}>
+                <ChevronRightIcon />
+                <Typography>
+                    { label }
+                </Typography>
+            </li>
+        </>
+    );
+};
+const TitleAndDate = ({company, title, date}) => {
+    return (
+        <>
+            <div style={{ display: 'flex', alignItems: 'flex-end'}}>
+                <Typography variant='h4' style={{paddingRight:'2vw', borderRight: '3px solid #566e6e'}}> { company } </Typography>
+                <Typography variant='h5' style={{ marginLeft: '2vw'}}> { title } </Typography>
+            </div>
+            <div style={{  }}>
+                <Typography>
+                    { date }
+                </Typography>
+            </div>
+        </>
+    );
+};
+const LanguagesUsed = ({ languages }) => {
+    return (
+      <>
+        {/* Technology used */}
+        <div>
+          <ul style={{ listStyle: 'none', display: 'flex' }}>
+            {languages.map((language, index) => (
+              <li key={index} style={{ marginRight: '10px' }}>{language}</li>
+            ))}
+          </ul>
+        </div>
+      </>
+    );
+};
+
 function TwoSectionsLayout() {
     return (
         <Container>
             <LeftSection>
-                <div style={{display: 'flex', flexDirection: 'column', border: '1px dashed red', padding: '0 4vw'}}>
-                    <div style={{ display: 'flex', alignItems: 'flex-end'}}>
-                        <Typography variant='h4' style={{paddingRight:'2vw', borderRight: '3px solid #566e6e'}}> Company x </Typography>
-                        <Typography variant='h5' style={{ marginLeft: '2vw'}}> Some Title </Typography>
-                    </div>
-                    <div style={{  }}>
-                        <Typography>
-                            March 24, 1993 - Jun 7 2023
-                        </Typography>
-                    </div>
+                <div style={leftSectionStyle}>
+                    <TitleAndDate company="company Z" title="Software Enginer" date="March 24, 1993 - Jun 7 2023" />
                     <div>
                         <ul style={{ listStyle: 'none', }}>
-                        <li style={{display: 'flex'}}>
-                                <ChevronRightIcon />
-                                <Typography>
-                                    Some some
-                                </Typography>
-                            </li>
-                            <li style={{display: 'flex'}}>
-                                <ChevronRightIcon />
-                                <Typography>
-                                    Some some
-                                </Typography>
-                            </li>
-                            <li style={{display: 'flex'}}>
-                                <ChevronRightIcon />
-                                <Typography>
-                                    Some some
-                                </Typography>
-                            </li>
+                            <JobDescription label="soem some" />
+                            <JobDescription label="nire adnd jf aksjfls some" />
+                            <JobDescription label="more ajdlfkjs" />
+                            <JobDescription label="soem some" />    
                         </ul>
                     </div>
-                    {/* Technology used */}
-                    <div>
-                        <ul style={{ listStyle: 'none', display: 'flex'}}>
-                            <li style={{ marginRight: '10px', }}> Java </li>
-                            <li style={{ marginRight: '10px', }}> C++ </li>
-                            <li style={{ marginRight: '10px', }}> Python </li>
-                            <li style={{ marginRight: '10px', }}> JavaScript </li>    
-                        </ul>
-                    </div>
+                    <LanguagesUsed languages={['Rust', 'Java', 'Python', 'SQL']}/>
                 </div>
             </LeftSection>
             <RightSection>
@@ -116,9 +103,9 @@ const profileTextStyle = {
 const Experience = () => {
     return (
         <div id='experience'>
-            <Paper square style={profileTextStyle} id="justBelowFront">
+            <Paper square style={profileTextStyle} >
                 <Box fontWeight='large'>
-                    <Typography variant='h3' fontWeight>
+                    <Typography variant='h3' >
                         Experience
                     </Typography>
                 </Box>

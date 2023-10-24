@@ -42,7 +42,7 @@ export const DrawerMenu = () => {
 
     return (
         <Box sx={{ display: 'flex', backgroundColor: '#e6e6e6'}}>
-            <IconButton style={iconStyle} size='large' edge='start' 
+            <IconButton style={iconStyle} edge='start' 
                 color='inherit' aria-label='logo' onClick={toggleDrawer(true)}>
                 <MenuIcon />
             </IconButton>

@@ -94,7 +94,7 @@ const Technology = () => {
         <div id='technology'>
             <Paper square elevation={0}  style={profileTextStyle}>
                 <Box fontWeight='large'>
-                    <Typography variant='h3' fontWeight>
+                    <Typography variant='h3' >
                         Technology
                     </Typography>
                 </Box>
