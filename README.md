@@ -1,4 +1,4 @@
-# Personal Website -> https://
+# Personal Website
 
 Day1: Friday, Oct 20, 2023
 
