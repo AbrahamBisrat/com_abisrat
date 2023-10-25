@@ -106,7 +106,7 @@ const Education = () => {
         <div id='education'>
             <Paper square style={profileTextStyle} >
                 <Box fontWeight='large'>
-                    <Typography variant='h3' fontWeight>
+                    <Typography variant='h3'>
                         Education
                     </Typography>
                 </Box>

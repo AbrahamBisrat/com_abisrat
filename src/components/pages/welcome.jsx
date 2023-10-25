@@ -43,7 +43,7 @@ const FrontPage = () => {
     }
     const handleType = (count) => {
         // access word count number
-        console.log(count);
+        // console.log(count);
     };
     const handleDone = () => {
         console.log("Done after 5 loops");
