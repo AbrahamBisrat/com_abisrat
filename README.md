@@ -27,3 +27,13 @@ Day4: Monday, Oct 23, 2023
 - S3 static hosting - Done
 - Route 53 - Configurations - Done
 - Certificates - Done
+
+Day5: Tuesday, Oct 24, 2023
+
+- Implemented backend with Lambda
+- Email Parsing and validation
+- API Gateway
+
+Day6: Wednesday, Oct 25, 2023
+
+- Finishing touches
