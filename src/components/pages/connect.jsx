@@ -118,7 +118,7 @@ const Connect = () => {
                 ) : (
                     <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }} style={ innerFormStyles }>
                         
-                        <TextField label="Email" variant="outlined" value={email} margin="normal"
+                        <TextField label="email" name="email" variant="outlined" value={email} margin="normal"
                             onChange={handleEmailChange} error={!validEmail} 
                             helperText={!validEmail ? 'Invalid email address' : ''} id="email"
                             required
