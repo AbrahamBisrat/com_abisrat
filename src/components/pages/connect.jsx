@@ -14,7 +14,6 @@ const profileTextStyle = {
 };
 const paperStyles = {
     boxShadow: 3,
-    height: '40vh',
     width: '70vw',
     margin: '0 auto',
     marginTop: 8,
@@ -128,7 +127,7 @@ const Connect = () => {
 
                         <TextareaAutosize variant="outlined" minRows={5} placeholder="Message ..."
                             style={textAreaStyles} name="message" />
-                        <Button type="submit" variant="contained" sx={{ mt: 3, mb: 2 }} style={{ margin: '2rem 0' }}  disabled={!validEmail} >
+                        <Button type="submit" variant="contained" sx={{ mt: 3, mb: 2 }} style={{ margin: '2rem 0', }}  disabled={!validEmail} >
                             Send Mail
                         </Button>
                     </Box>
