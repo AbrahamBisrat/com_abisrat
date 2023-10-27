@@ -33,7 +33,8 @@ jobs:
       - name: Install Dependencies
         run: |
           node --version
-          npm -f install --omit=dev
+          npm -f install @material-ui/core @material-ui/icons
+          npm -f install
 
       - name: Build Static Website
         run: npm run build
