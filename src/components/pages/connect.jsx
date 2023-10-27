@@ -102,7 +102,7 @@ const Connect = () => {
             <Paper square style={profileTextStyle} >
                 <Box fontWeight='large'>
                     <Typography variant='h3'>
-                        Connect
+                        Connect - CICD check
                     </Typography>
                 </Box>
             </Paper>
