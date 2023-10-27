@@ -1,8 +1,8 @@
 import React from 'react';
-import { Paper, Box, Typography, styled, Avatar } from "@material-ui/core";
+import { Paper, Box, Typography, styled, Avatar, Button } from "@material-ui/core";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { experiences } from "../data/expData";
-import { headerHeight } from '../constants/constants';
+import { headerHeight, resumeUrl } from '../constants/constants';
 
 const lighterSame = '#86aaaa';
 
@@ -84,13 +84,29 @@ const experienceTextStyle = {
   padding: '10vh',
 };
 
+const experienceDownloadBox = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+}
+
 const Experience = () => (
   <div id='experience'>
     <Paper square style={experienceTextStyle}>
-      <Box fontWeight='large'>
+      <Box fontWeight='large' style={experienceDownloadBox}>
         <Typography variant='h3'>
           Experience
         </Typography>
+        <div style={{ height: '5vh'}} />
+        <Button variant='outlined' component='label' sytle={{ padding: '1rem' }}>
+            <a href={resumeUrl}
+            target="_blank" rel="noreferrer" download style={{ textDecoration: 'none', color: 'black', }}> 
+                <Typography varint='h4'>
+                    Download Resume
+                </Typography>
+            </a>
+        </Button>
       </Box>
     </Paper>
     {experiences.map(eachExperience => <TwoSectionsLayout expr={eachExperience} />)}
