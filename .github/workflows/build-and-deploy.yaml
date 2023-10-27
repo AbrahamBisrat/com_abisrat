@@ -33,7 +33,8 @@ jobs:
       - name: Install Dependencies
         run: |
           node --version
-          npm ci --omit=dev
+          npm -f install --omit=dev
+
       - name: Build Static Website
         run: npm run build
 
