@@ -1,5 +1,6 @@
 import { Paper, Box, Typography, styled, Avatar } from "@material-ui/core";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import { experiences } from "../data/expData";
 
 const lighterSame = '#86aaaa';
 const Container = styled('div')({
@@ -70,25 +71,23 @@ const LanguagesUsed = ({ languages }) => {
     );
 };
 
-function TwoSectionsLayout() {
+function TwoSectionsLayout({ expr }) {
     return (
         <Container>
             <LeftSection>
                 <div style={leftSectionStyle}>
-                    <TitleAndDate company="company Z" title="Software Enginer" date="March 24, 1993 - Jun 7 2023" />
+                    <TitleAndDate company={ expr.org } title={ expr.title } date={ expr.date } />
                     <div>
                         <ul style={{ listStyle: 'none', }}>
-                            <JobDescription label="soem some" />
-                            <JobDescription label="nire adnd jf aksjfls some" />
-                            <JobDescription label="more ajdlfkjs" />
-                            <JobDescription label="soem some" />    
+                            {/* <JobDescription label="soem some" /> */}
+                            { expr.desc.map(jobDesc => <JobDescription label={ jobDesc } />) }
                         </ul>
                     </div>
-                    <LanguagesUsed languages={['Rust', 'Java', 'Python', 'SQL']}/>
+                    <LanguagesUsed languages={expr.lang}/>
                 </div>
             </LeftSection>
             <RightSection>
-                <Avatar src="/logos/apple.svg" style={logoStyle}/>
+                <Avatar src={ expr.imgSrc } style={logoStyle}/>
             </RightSection>
         </Container>
     );
@@ -100,6 +99,7 @@ const profileTextStyle = {
     textAlign: 'center',
     padding: '10vh',
 };
+
 const Experience = () => {
     return (
         <div id='experience'>
@@ -110,7 +110,8 @@ const Experience = () => {
                     </Typography>
                 </Box>
             </Paper>
-            <TwoSectionsLayout />
+            {experiences.map( eachExperience => <TwoSectionsLayout expr={eachExperience} />) }
+            {/* <TwoSectionsLayout /> */}
         </div>
     );
 };

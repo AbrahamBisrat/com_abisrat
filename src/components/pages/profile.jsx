@@ -27,7 +27,7 @@ const promptTextStyle = {
     marginRight: '1vw',
 }
 const avatarStyles = {
-    width:'auto', 
+    width:'20rem', 
     height: '20rem',
     border: '3px solid #fff',
 }
@@ -38,16 +38,16 @@ const profileAnswerStyle = {
     color: '#ffffff',
     paddingLeft: '2vw',
     borderLeft: '1px Solid #437799',
-    marginBottom: '1vh',
+    marginBottom: '2vh',
 }
 const PromptAndAnswer = ({prompt, answer}) => {
     return (
         <Box display="flex" justifyContent="center">
           <div style={promptTextStyle}>
-            <Typography>{prompt}</Typography>
+            <Typography variant="h5" >{prompt}</Typography>
           </div>
           <div style={profileAnswerStyle}>
-            <Typography>{answer}</Typography>
+            <Typography variant="h4" >{answer}</Typography>
           </div>
         </Box>
     );
