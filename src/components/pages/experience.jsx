@@ -1,118 +1,100 @@
+import React from 'react';
 import { Paper, Box, Typography, styled, Avatar } from "@material-ui/core";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { experiences } from "../data/expData";
+import { headerHeight } from '../constants/constants';
 
 const lighterSame = '#86aaaa';
+
 const Container = styled('div')({
-    display: 'flex',
-    width: '100vw',
-    height: '25vh',
-    backgroundColor: lighterSame,
+  display: 'flex',
+  backgroundColor: lighterSame,
 });
+
 const LeftSection = styled('div')({
-    flex: '1 0 80%',
-    // border: '1px dashed black'
+  display: 'flex',
+  flex: '1 0 80%',
+  flexDirection: 'column',
+  padding: '0 3vw',
 });
+
 const RightSection = styled('div')({
-    flex: '1 0 20%',
-    // border: '1px dashed black'
+  flex: '1 0 20%',
 });
+
 const logoStyle = {
-    padding: '4%',
-    width: '80%', 
-    height:'auto',
-    margin: '10% auto',
-};
-const leftSectionStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    // border: '1px dashed red',
-    padding: '0 4vw',
-};
-const JobDescription = ({label}) => {
-    return (
-        <>
-            <li style={{display: 'flex'}}>
-                <ChevronRightIcon />
-                <Typography>
-                    { label }
-                </Typography>
-            </li>
-        </>
-    );
-};
-const TitleAndDate = ({company, title, date}) => {
-    return (
-        <>
-            <div style={{ display: 'flex', alignItems: 'flex-end'}}>
-                <Typography variant='h4' style={{paddingRight:'2vw', borderRight: '3px solid #566e6e'}}> { company } </Typography>
-                <Typography variant='h5' style={{ marginLeft: '2vw'}}> { title } </Typography>
-            </div>
-            <div style={{  }}>
-                <Typography>
-                    { date }
-                </Typography>
-            </div>
-        </>
-    );
-};
-const LanguagesUsed = ({ languages }) => {
-    return (
-      <>
-        {/* Technology used */}
-        <div>
-          <ul style={{ listStyle: 'none', display: 'flex' }}>
-            {languages.map((language, index) => (
-              <li key={index} style={{ marginRight: '10px' }}>{language}</li>
-            ))}
-          </ul>
-        </div>
-      </>
-    );
+  padding: '4%',
+  width: '80%',
+  height: 'auto',
 };
 
-function TwoSectionsLayout({ expr }) {
-    return (
-        <Container>
-            <LeftSection>
-                <div style={leftSectionStyle}>
-                    <TitleAndDate company={ expr.org } title={ expr.title } date={ expr.date } />
-                    <div>
-                        <ul style={{ listStyle: 'none', }}>
-                            {/* <JobDescription label="soem some" /> */}
-                            { expr.desc.map(jobDesc => <JobDescription label={ jobDesc } />) }
-                        </ul>
-                    </div>
-                    <LanguagesUsed languages={expr.lang}/>
-                </div>
-            </LeftSection>
-            <RightSection>
-                <Avatar src={ expr.imgSrc } style={logoStyle}/>
-            </RightSection>
-        </Container>
-    );
-};
-const profileTextStyle = {
-    height: '30vh',
-    backgroundColor: '#77a0a0',
-    color: 'black',
-    textAlign: 'center',
-    padding: '10vh',
+const JobDescription = ({ label }) => (
+  <li style={{ display: 'flex',  }}>
+    <ChevronRightIcon />
+    <Typography variant='body1' >
+      { label }
+    </Typography>
+  </li>
+);
+
+const TitleOrgdDate = ({ company, title, date }) => (
+  <>
+    <div style={{ display: 'flex', alignItems: 'flex-end', }}>
+      <Typography variant='h4' style={{ paddingRight: '2vw', borderRight: '2px solid #566e6e' }}>{company}</Typography>
+      <Typography variant='h5' style={{ marginLeft: '2vw' }}>{title}</Typography>
+    </div>
+    <div>
+      <Typography variant='body1' style={{ fontStyle: 'italic', fontWeight: 'normal', }}>
+        {date}
+      </Typography>
+    </div>
+  </>
+);
+
+const LanguagesUsed = ({ languages }) => (
+    <ul style={{ listStyle: 'none', display: 'flex' }}>
+      {languages.map((language, index) => (
+        <li key={index} style={{ marginRight: '10px', border: "1px solid #00000080", borderRadius: "5px", padding: '2px' }}>{language}</li>
+      ))}
+    </ul>
+);
+
+const TwoSectionsLayout = ({ expr }) => (
+  <Container style={{ padding: "1rem 0", color: '#3d4e4e', borderBottom: '1px solid #86a000' }} >
+    <LeftSection>
+      <TitleOrgdDate company={expr.org} title={expr.title} date={expr.date} />
+      <div>
+        <ul style={{ listStyle: 'none' }}>
+          {expr.desc.map(jobDesc => <JobDescription label={jobDesc} />)}
+        </ul>
+      </div>
+      <LanguagesUsed languages={expr.lang} />
+    </LeftSection>
+    <RightSection>
+      <Avatar src={expr.imgSrc} style={logoStyle} />
+    </RightSection>
+  </Container>
+);
+
+const experienceTextStyle = {
+  height: headerHeight,
+  backgroundColor: '#77a0a0',
+  color: 'black',
+  textAlign: 'center',
+  padding: '10vh',
 };
 
-const Experience = () => {
-    return (
-        <div id='experience'>
-            <Paper square style={profileTextStyle} >
-                <Box fontWeight='large'>
-                    <Typography variant='h3' >
-                        Experience
-                    </Typography>
-                </Box>
-            </Paper>
-            {experiences.map( eachExperience => <TwoSectionsLayout expr={eachExperience} />) }
-            {/* <TwoSectionsLayout /> */}
-        </div>
-    );
-};
+const Experience = () => (
+  <div id='experience'>
+    <Paper square style={experienceTextStyle}>
+      <Box fontWeight='large'>
+        <Typography variant='h3'>
+          Experience
+        </Typography>
+      </Box>
+    </Paper>
+    {experiences.map(eachExperience => <TwoSectionsLayout expr={eachExperience} />)}
+  </div>
+);
+
 export default Experience;

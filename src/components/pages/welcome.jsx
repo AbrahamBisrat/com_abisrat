@@ -3,6 +3,8 @@ import { Typography, Box, Paper, IconButton } from "@material-ui/core"
 import { Typewriter } from "react-simple-typewriter"
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import { HashLink } from "react-router-hash-link";
+import { profile, welcomePageTitles } from '../data/profileData';
+
 const centered = {
     display: 'flex',
     justifyContent: 'center',
@@ -14,11 +16,6 @@ const frontPageStyle = {
     height: '100vh',
     backgroundColor: '#d9d9d9',
 };
-const displayWords = [
-    "Software Engineer",
-    "Full Stack Developer",
-    "Back End Developer"
-];
 const nameStyle = {
     paddingTop: '5vh',
 };
@@ -63,12 +60,12 @@ const FrontPage = () => {
         <Paper square style={frontPageStyle} id='home'>
             <Typography align='center' variant='h1' style={nameStyle} >
                 <Box sx={{ fontWeight: '400'}}>
-                    Abraham Bisrat
+                    { profile.Name }
                 </Box>
             </Typography>
             <Typography align='center' variant='h3' style={titlesStyle}>
                 <Typewriter
-                    words={displayWords}
+                    words={welcomePageTitles}
                     loop={10000}
                     cursor
                     cursorStyle="_"

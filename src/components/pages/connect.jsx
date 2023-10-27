@@ -2,11 +2,11 @@ import { Typography, Box, Paper, Button, TextField, TextareaAutosize, createThem
 import { useState } from 'react';
 import CircularProgress from "@material-ui/core/CircularProgress";
 import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
-// import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import { headerHeight } from "../constants/constants";
 
 const theme = createTheme();
 const profileTextStyle = {
-    height: '30vh',
+    height: headerHeight,
     backgroundColor: '#d9d9d9',
     color: 'black',
     textAlign: 'center',

@@ -1,5 +1,6 @@
 import { Paper, Box, Typography, styled, Avatar } from "@material-ui/core";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import { headerHeight } from "../constants/constants";
 
 const lighterSame = '#86aa85';
 const Container = styled('div')({
@@ -59,7 +60,6 @@ const TitleAndDate = ({company, title, date}) => {
 const LanguagesUsed = ({ languages }) => {
     return (
       <>
-        {/* Technology used */}
         <div>
           <ul style={{ listStyle: 'none', display: 'flex' }}>
             {languages.map((language, index) => (
@@ -95,7 +95,7 @@ function TwoSectionsLayout() {
     );
 };
 const profileTextStyle = {
-    height: '30vh',
+    height: headerHeight,
     backgroundColor: '#77a076',
     color: 'black',
     textAlign: 'center',

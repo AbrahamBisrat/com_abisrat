@@ -1,4 +1,4 @@
-import { createTheme, Drawer, List, ListItem, ListItemIcon, ListItemText, Box, IconButton } from "@material-ui/core";
+import { createTheme, Typography, Drawer, List, ListItem, ListItemIcon, ListItemText, Box, IconButton } from "@material-ui/core";
 import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import MenuIcon from "@material-ui/icons/Menu"
@@ -24,7 +24,7 @@ const MenuItem = ({ icon, text, to }) => {
         <HashLink to={to} style={linkStyles}>
             <ListItem button>
                 <ListItemIcon>{icon}</ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={ <Typography variant='h5' style={{ color: "#3d4e4e" }} >{text}</Typography>} />
             </ListItem>
         </HashLink>
     );

@@ -1,8 +1,11 @@
 import { Typography, Paper, Avatar, Box, styled } from "@material-ui/core";
+import { headerHeight } from "../constants/constants";
+import { profile, avatar_src } from "../data/profileData";
+
 const lightBlue = '#2f5975';
 
 const profileTextStyle = {
-    height: '30vh',
+    height: headerHeight,
     backgroundColor: '#284b63',
     color: '#ffffff',
     textAlign: 'center',
@@ -63,14 +66,14 @@ const Profile = () => {
             <Paper square style={{backgroundColor:'#2f5975', height:'5vh'}}></Paper>
             <Paper square  style={profileDetailStyle}>
                 <CenteredPaper square elevation={0} style={{backgroundColor: lightBlue}}>
-                    <Avatar src="/images/avatar.jpg" style={avatarStyles} />
+                    <Avatar src={ avatar_src } style={avatarStyles} />
                 </CenteredPaper>
                 <Paper square elevation={0} style={{backgroundColor:'#2f5975', height:'5vh'}}/>
-                {/* profile details text */}
-                <PromptAndAnswer prompt='Name' answer='Abraham Bisrat'/>
-                <PromptAndAnswer prompt='Birth Day' answer='2/12/2010'/>
-                <PromptAndAnswer prompt='Titles' answer='Software Engineer'/>
-                <PromptAndAnswer prompt='Locations' answer='Seattle Washington, US'/>
+                
+                {
+                    Object.entries(profile).map(([prompt, answer]) => (
+                        <PromptAndAnswer prompt={ prompt } answer={ answer } /> ))
+                }
             </Paper>
         </div>
     );

@@ -19,11 +19,9 @@ export const experiences = [
       "Worked with Spring, React, JavaScript, Postgres, Cassandra.",
       "Migrating Legacy applications built with JSP to Spring Framework.",
       "Utilized AWS to deploy and manage cloud infrastructure, enabling scalable and cost-effective solutions for various projects.",
-      "task 4 and some more and more tasks",
-      "task 5 and some more and more tasks",
     ],
     lang: ["Java", "Aws", "React", "DynamoDb", "SQL"],
-    imgSrc: "/logos/apple.svg",
+    imgSrc: "/logos/unnamedCompany.svg",
   },
   {
     org: "Engstien",
@@ -34,6 +32,6 @@ export const experiences = [
       "Design and implement software for embedded devices and systems from requirements to production and commercial deployment.",
     ],
     lang: ["Rust", "Java", "Python", "SQL", "Arduino", "C++"],
-    imgSrc: "/logos/apple.svg",
+    imgSrc: "/logos/unnamedCompany.svg",
   },
 ];
