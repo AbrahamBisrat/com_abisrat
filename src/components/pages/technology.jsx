@@ -22,7 +22,7 @@ const cardStyle = {
     padding: '1rem',
     margin: '1rem 0',
 };
-const breaker = '3vh';
+const breaker = '2vh';
 const LogoGrid = ({ logos}) => {
     return (
         <>
@@ -49,7 +49,7 @@ const LogoGrid = ({ logos}) => {
 const LogoTile = ({logoList, label}) => {
     return (
         <>
-            <Paper square elevation={0} style={{ backgroundColor: '#e6e6e6 ', padding: '0 2rem' }}>
+            <Paper square elevation={0} style={{ backgroundColor: '#e6e6e6 ', padding: '2rem 2rem' }}>
                 <Typography variant='h4'>
                     { label }
                 </Typography>
