@@ -1,5 +1,4 @@
 import { Paper, Box, Typography, styled, Avatar } from "@material-ui/core";
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { headerHeight } from "../constants/constants";
 import { educations } from "../data/educationData";
 
