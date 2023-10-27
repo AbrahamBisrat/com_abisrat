@@ -32,9 +32,6 @@ const StyledBlogText = styled(Paper)({
 });
 
 const StyledBlogHeaderText = styled(Typography)({
-  margin: 0,
-  fontSize: "24px",
-  fontWeight: "bold",
 });
 
 const StyledArticleTitle = styled(Typography)({
