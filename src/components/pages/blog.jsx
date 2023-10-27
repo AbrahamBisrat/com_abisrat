@@ -6,6 +6,7 @@ const StyledArticleGrid = styled("div")({
   display: "grid",
   gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
   gap: "20px",
+  backgroundColor: "#36749e",
 });
 
 const StyledArticleItem = styled("div")({
@@ -28,7 +29,6 @@ const StyledBlogText = styled(Paper)({
   color: 'white',
   alignItems: "center",
   justifyContent: "center",
-  marginBottom: "20px",
 });
 
 const StyledBlogHeaderText = styled(Typography)({
@@ -99,9 +99,8 @@ const MediumArticles = () => {
   return (
     <StyledArticleGrid>
       {articles.map((article, index) => (
-        <div key={index} className="article-item">
+        <div key={index} className="article-item" style={{ padding: '2rem' }}>
           <MediumCard article={article} />
-          <div style={{ height: '2vh' }}/>
         </div>
       ))}
     </StyledArticleGrid>
