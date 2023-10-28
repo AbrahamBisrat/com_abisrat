@@ -52,7 +52,7 @@ export const DrawerMenu = () => {
                     <List>
                         <MenuItem icon={<HomeIcon />} text="Home" to="#home" />
                         <MenuItem icon={<PersonIcon />} text="Profile" to="#profile" />
-                        <MenuItem icon={<VerifiedUserIcon />} text="Experience" to="#exprience" />
+                        <MenuItem icon={<VerifiedUserIcon />} text="Experience" to="#experience" />
                         <MenuItem icon={<LayersIcon />} text="Technology" to="#technology" />
                         <MenuItem icon={<SchoolIcon />} text="Education" to="#education" />
                         <MenuItem icon={<ShareIcon />} text="Connect" to="#connect" />
