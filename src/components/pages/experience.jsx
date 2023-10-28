@@ -24,7 +24,7 @@ const RightSection = styled('div')({
 
 const logoStyle = {
   padding: '4%',
-  width: '80%',
+  width: '35%',
   height: 'auto',
 };
 

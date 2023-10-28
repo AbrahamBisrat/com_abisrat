@@ -1,8 +1,11 @@
-import { Typography, Box, Paper, Button, TextField, TextareaAutosize, createTheme, } from "@material-ui/core";
+import { Typography, IconButton , Box, Paper, Button, TextField, TextareaAutosize, createTheme, } from "@material-ui/core";
 import { useState } from 'react';
 import CircularProgress from "@material-ui/core/CircularProgress";
 import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 import { headerHeight } from "../constants/constants";
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import Tooltip from "@material-ui/core/Tooltip";
 
 const theme = createTheme();
 const profileTextStyle = {
@@ -127,9 +130,11 @@ const Connect = () => {
 
                         <TextareaAutosize variant="outlined" minRows={5} placeholder="Message ..."
                             style={textAreaStyles} name="message" />
-                        <Button type="submit" variant="contained" sx={{ mt: 3, mb: 2 }} style={{ margin: '2rem 0', }}  disabled={!validEmail} >
-                            Send Mail
-                        </Button>
+                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                            <Button type="submit" variant="contained" sx={{ mt: 3, mb: 2 }} style={{ margin: '2rem 0', }}  disabled={!validEmail} >
+                                Send Mail
+                            </Button>
+                        </div>
                     </Box>
                 )}
                 {sent && (
@@ -142,6 +147,28 @@ const Connect = () => {
                     </Box>
                     )
                 }
+
+               <Box sytle={{ display: "flex", }}>
+                <Tooltip title="LinkedIn">
+                        <IconButton
+                        color="primary"
+                        href="https://www.linkedin.com/your-linkedin-profile"
+                        target="_blank"
+                        >
+                        <LinkedInIcon />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title="GitHub">
+                        <IconButton
+                        color="primary"
+                        href="https://github.com/your-github-profile"
+                        target="_blank"
+                        >
+                        <GitHubIcon />
+                        </IconButton>
+                    </Tooltip>
+               </Box>
+
             </Paper>
             <div style={{ height: '10vh' }}/>
         </div>
