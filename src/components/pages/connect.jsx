@@ -137,7 +137,7 @@ const Connect = () => {
                         <AssignmentTurnedInIcon style={{ height: '5rem', width: '5rem', margin: '0 auto', }} />
                         
                         <Typography variant='h5'>
-                            Got it, I will get back to you as soon as possible.
+                            Got it, I will get back to you as soon as possible!
                         </Typography>
                     </Box>
                     )
