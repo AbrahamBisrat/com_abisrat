@@ -2,7 +2,8 @@ import React from 'react';
 import { Paper, Box, Typography, styled, Avatar, Button } from "@material-ui/core";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { experiences } from "../data/expData";
-import { headerHeight, resumeUrl } from '../constants/constants';
+import { headerHeight, } from '../constants/constants';
+import { resumeUrl } from '../data/config';
 
 const lighterSame = '#86aaaa';
 
@@ -36,6 +37,21 @@ const JobDescription = ({ label }) => (
     </Typography>
   </li>
 );
+
+const experienceTextStyle = {
+  height: headerHeight,
+  backgroundColor: '#77a0a0',
+  color: 'black',
+  textAlign: 'center',
+  padding: '10vh',
+};
+
+const experienceDownloadBox = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+};
 
 const TitleOrgdDate = ({ company, title, date }) => (
   <>
@@ -75,21 +91,6 @@ const TwoSectionsLayout = ({ expr }) => (
     </RightSection>
   </Container>
 );
-
-const experienceTextStyle = {
-  height: headerHeight,
-  backgroundColor: '#77a0a0',
-  color: 'black',
-  textAlign: 'center',
-  padding: '10vh',
-};
-
-const experienceDownloadBox = {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-};
 
 const Experience = () => (
   <div id='experience'>

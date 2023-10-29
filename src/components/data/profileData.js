@@ -12,3 +12,7 @@ export const welcomePageTitles = [
   "Full Stack Developer",
   "Back End Developer",
 ];
+
+export const linkedinUrl = "https://linkedin.com/in/abisrat";
+
+export const githubUrl = "https://github.com/AbrahamBisrat";

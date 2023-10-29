@@ -6,12 +6,9 @@ import Connect from "./pages/connect";
 import Technology from "./pages/technology";
 import Blog from "./pages/blog";
 
-const fullPageStyle = {
-}
-
 const FullPage = () => {
     return (
-        <div style={fullPageStyle}>
+        <div>
             <FrontPage />
             <Profile />
             <Experience />

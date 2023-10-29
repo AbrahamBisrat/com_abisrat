@@ -11,8 +11,6 @@ const centered = {
     alignItems: 'center',
 };
 const frontPageStyle = {
-    // paddingLeft: '10vw',
-    // paddingTop: '20vh',
     height: '100vh',
     backgroundColor: '#d9d9d9',
 };

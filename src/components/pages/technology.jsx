@@ -48,14 +48,12 @@ const LogoGrid = ({ logos}) => {
 };
 const LogoTile = ({logoList, label}) => {
     return (
-        <>
-            <Paper square elevation={0} style={{ backgroundColor: '#e6e6e6 ', padding: '2rem 2rem' }}>
-                <Typography variant='h4'>
-                    { label }
-                </Typography>
-                <LogoGrid logos={logoList}/>
-            </Paper>
-        </>
+        <Paper square elevation={0} style={{ backgroundColor: '#e6e6e6 ', padding: '2rem 2rem' }}>
+            <Typography variant='h4'>
+                { label }
+            </Typography>
+            <LogoGrid logos={logoList}/>
+        </Paper>
     );
 };
 const Technology = () => {
