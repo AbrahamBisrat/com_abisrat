@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Typography, Paper, styled } from "@material-ui/core";
 import { headerHeight } from "../constants/constants";
+import { mediumProfileUrl } from "../data/config";
 
 const StyledArticleGrid = styled("div")({
   display: "grid",
@@ -54,7 +55,7 @@ const StyledReadMoreLink = styled("a")({
   },
 });
 
-const mediumArticle = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abisrat97";
+const mediumProfile = mediumProfileUrl
 
 const MediumCard = ({ article }) => {
     return (
@@ -82,7 +83,7 @@ const MediumArticles = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetch(mediumArticle)
+    fetch(mediumProfile)
       .then((res) => res.json())
       .then((data) => setArticles(data.items))
       .catch((error) => console.error(error));
