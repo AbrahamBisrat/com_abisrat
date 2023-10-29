@@ -19,7 +19,7 @@ const LeftSection = styled('div')({
 });
 
 const RightSection = styled('div')({
-  flex: '1 0 20%',
+//   flex: '1 0 20%',
 });
 
 const logoStyle = {
@@ -89,7 +89,7 @@ const experienceDownloadBox = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-}
+};
 
 const Experience = () => (
   <div id='experience'>

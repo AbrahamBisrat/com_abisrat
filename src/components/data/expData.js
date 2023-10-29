@@ -12,7 +12,7 @@ export const experiences = [
     imgSrc: "/logos/apple.svg",
   },
   {
-    org: "TEKLE WELDEGEBRIEL GENERAL",
+    org: "TWGC",
     title: "Software Engineer",
     date: "Feb 2018 - Oct 2021",
     desc: [

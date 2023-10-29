@@ -152,7 +152,7 @@ const Connect = () => {
                 <Tooltip title="LinkedIn">
                         <IconButton
                         color="primary"
-                        href="https://www.linkedin.com/your-linkedin-profile"
+                        href="https://www.linkedin.com/in/abisrat"
                         target="_blank"
                         >
                         <LinkedInIcon />
@@ -161,7 +161,7 @@ const Connect = () => {
                     <Tooltip title="GitHub">
                         <IconButton
                         color="primary"
-                        href="https://github.com/your-github-profile"
+                        href="https://github.com/AbrahamBisrat"
                         target="_blank"
                         >
                         <GitHubIcon />

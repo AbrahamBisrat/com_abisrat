@@ -17,12 +17,12 @@ const LeftSection = styled('div')({
 });
 
 const RightSection = styled('div')({
-    flex: '1 0 20%',
+    // flex: '1 0 20%',
 });
 
 const logoStyle = {
     padding: '4%',
-    width: '80%',
+    width: '50%',
     height: 'auto',
 };
 
@@ -41,17 +41,17 @@ const TitleOrgdDate = ({ company, title, date }) => (
 );
 
 const Courses = ({ courses }) => (
-    <ul style={{ listStyle: 'none', display: 'flex' }}>
+    <ul style={{ listStyle: 'none', display: 'flex', flexWrap: 'wrap' }}>
         {courses.map((course, index) => (
-            <li key={index} style={{ marginRight: '15px', border: "2px solid #00000080", borderRadius: "5px", padding: '5px', }}>{
+            <li key={index} style={{ marginRight: '15px', border: "2px solid #00000080", borderRadius: "5px", padding: '5px', margin: '1vw' }}>{
                 <Typography variant='body2'>{course}</Typography>
             }</li>
         ))}
     </ul>
 );
 
-const TwoSectionsLayout = ({ expr: edu }) => (
-    <Container style={{ color: '#3d4e4e', borderBottom: '1px solid #86a000' }} >
+const TwoSectionsLayout = ({ edu }) => (
+    <Container style={{ color: '#3d4e4e', borderBottom: '1px solid #86a000', paddingTop: '5vh', }} >
       <LeftSection>
         <TitleOrgdDate company={edu.org} title={edu.major} date={edu.date} />
         <Courses courses={edu.majorCourses} />
@@ -71,8 +71,7 @@ const educationTextStyle = {
 };
 
 const Education = () => (
-    <div id='education'>
-    <div>
+    <div id ='education'>
         <Paper square style={educationTextStyle}>
         <Box fontWeight='large'>
             <Typography variant='h3'>
@@ -81,10 +80,9 @@ const Education = () => (
         </Box>
         </Paper>
         <div style={{ padding: '2rem 1rem', backgroundColor: '#86aa85' }}>
-            {educations.map(eachEducation => <TwoSectionsLayout expr={eachEducation} />)}
+            {educations.map(eachEducation => <TwoSectionsLayout edu={eachEducation} />)}
         </div>
     </div>
-  </div>
 );
 
 export default Education;

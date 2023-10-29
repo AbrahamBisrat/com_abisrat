@@ -33,7 +33,7 @@ const LogoGrid = ({ logos}) => {
                     <Grid item key={logo.label + index} xs={6} sm={4} md={2}>
                         <Card elevation={20} style={cardStyle}>
                             <img alt="" loading='lazy' type="image/svg+xml" src={logo.src} height="50%" width="50%" />
-                            <CardContent>
+                            <CardContent style={{ padding: '.5   rem'}}>
                                 <Typography gutterBottom variant="h5" component="h2" fontFamily="monospace">
                                     {logo.label}
                                 </Typography>
