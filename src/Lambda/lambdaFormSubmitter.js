@@ -43,7 +43,7 @@ function generateHTML(payload) {
   `;
 }
 
-const verifiedEmail = "put_your_email@here.com";
+const verifiedEmail = "put_your_SES_verified_email@here.com";
 function generateEmailParams(html) {
   const params = {
     Destination: {
