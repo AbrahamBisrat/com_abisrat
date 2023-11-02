@@ -8,7 +8,7 @@ export const experiences = [
       "Provided exceptional production support for clients by promptly addressing and resolving critical software issues.",
       "Developed a business intelligence dashboard.",
     ],
-    lang: ["Java", "PosGres", "React", "Kafka", "AWS"],
+    lang: ["Java", "PostgreSQL", "React", "Kafka", "AWS"],
     imgSrc: "/logos/unnamedCompany.svg",
   },
   {
