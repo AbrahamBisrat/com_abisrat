@@ -1,5 +1,17 @@
 export const experiences = [
   {
+    org: "Craft Software",
+    title: "Software Engineer",
+    date: "Mar 2023 - present",
+    desc: [
+      "Developed a full stack solution web applications with React and Spring boot.",
+      "Provided exceptional production support for clients by promptly addressing and resolving critical software issues.",
+      "Developed a business intelligence dashboard.",
+    ],
+    lang: ["Java", "PosGres", "React", "Kafka", "AWS"],
+    imgSrc: "/logos/unnamedCompany.svg",
+  },
+  {
     org: "Apple - contract",
     title: "Java Engineer",
     date: "Aug 2022 - March 2023",
