@@ -1,20 +1,26 @@
-# Personal Website
+# 🌐 Personal Website
 
-## Hosting Environment: AWS
+## ☁️ Hosting Environment: AWS
 
 **Description:** This website is hosted on Amazon Web Services (AWS) and serves as a professional showcase.
 
-## Design Usage
+---
+
+## 🎨 Design Usage
 
 **Template:** If you find the design appealing and would like to use it as a template for your own website, you can easily do so.
 
-## Data and Configuration
+---
+
+## 📁 Data and Configuration
 
 **Location:** All data and configuration files can be found in the `./src/data` folder.
 
-**Privacy Considerations:** Please be aware that the `./src/data` folder contains Personally Identifiable Information (PII). Exercise caution and ensure the appropriate security measures are in place.
+**Privacy Considerations:** ⚠️ Please be aware that the `./src/data` folder contains Personally Identifiable Information (PII). Exercise caution and ensure the appropriate security measures are in place.
 
-## Connect Section - Form Submission
+---
+
+## 📬 Connect Section - Form Submission
 
 **Functionality:** In the "Connect" section of the website, there is a form that allows for user submission.
 
