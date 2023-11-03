@@ -1,10 +1,10 @@
-import FrontPage from "./pages/welcome";
-import Profile from "./pages/profile";
-import Experience from "./pages/experience";
-import Education from "./pages/education";
-import Connect from "./pages/connect";
-import Technology from "./pages/technology";
-import Blog from "./pages/blog";
+import FrontPage from "./welcome";
+import Profile from "./profile";
+import Experience from "./experience";
+import Education from "./education";
+import Connect from "./connect";
+import Technology from "./technology";
+import Blog from "./blog";
 
 const FullPage = () => {
     return (
