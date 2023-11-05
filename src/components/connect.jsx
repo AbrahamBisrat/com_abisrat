@@ -47,9 +47,9 @@ const Lambda_URL = LambdaURL;
 const Connect = () => {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
-  const [email, setEmail] = useState('');
-  const [validEmail, setValidEmail] = useState(true);
-  const [isButtonDisabled, setIsButtonDisabled] = useState(true); // Initially disabled
+  // const [email, setEmail] = useState('');
+  // const [validEmail, setValidEmail] = useState(true);
+  // const [isButtonDisabled, setIsButtonDisabled] = useState(true); // Initially disabled
 
   const innerFormStyles = {
     display: sent ? 'none' : 'flex',
@@ -57,19 +57,19 @@ const Connect = () => {
     width: '80%',
   };
 
-  const handleEmailChange = (e) => {
-    const inputValue = e.target.value;
-    setEmail(inputValue);
+  // const handleEmailChange = (e) => {
+  //   const inputValue = e.target.value;
+  //   setEmail(inputValue);
 
-    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+  //   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
-    const isValid = emailRegex.test(inputValue);
+  //   const isValid = emailRegex.test(inputValue);
 
-    setValidEmail(isValid);
+  //   setValidEmail(isValid);
 
-    // Enable the button if email is valid and other fields are not empty
-    setIsButtonDisabled(!isValid || inputValue.trim() === '' || !document.querySelector('textarea').value.trim() === '');
-  };
+  //   // Enable the button if email is valid and other fields are not empty
+  //   setIsButtonDisabled(!isValid || inputValue.trim() === '' || !document.querySelector('textarea').value.trim() === '');
+  // };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -117,7 +117,7 @@ const Connect = () => {
           margin="normal"
           // onChange={handleEmailChange}
           // error={!validEmail}
-          helperText={!validEmail ? 'Invalid email address' : ''}
+          // helperText={!validEmail ? 'Invalid email address' : ''}
           id="email"
           required
         />
