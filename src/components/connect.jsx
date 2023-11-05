@@ -113,10 +113,10 @@ const Connect = () => {
           label="email"
           name="email"
           variant="outlined"
-          value={email}
+          // value={email}
           margin="normal"
-          onChange={handleEmailChange}
-          error={!validEmail}
+          // onChange={handleEmailChange}
+          // error={!validEmail}
           helperText={!validEmail ? 'Invalid email address' : ''}
           id="email"
           required
@@ -142,7 +142,7 @@ const Connect = () => {
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
             style={{ margin: '2rem 0' }}
-            disabled={isButtonDisabled} // Disable the button based on user input
+            // disabled={isButtonDisabled} // Disable the button based on user input
           >
             Send Mail
           </Button>
