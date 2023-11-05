@@ -156,7 +156,7 @@ const Connect = () => {
       <Box style={{ height: '100%', ...centered }}>
         <AssignmentTurnedInIcon style={{ height: '5rem', width: '5rem', margin: '0 auto' }} />
         <Typography variant='h5'>
-          Mail received, I will get back to you as soon as possible!
+          Mail received.
         </Typography>
       </Box>
     );
