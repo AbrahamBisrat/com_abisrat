@@ -11,7 +11,7 @@ import { LambdaURL } from "../data/config";
 
 const p = (text) => console.log(text);
 const theme = createTheme();
-const profileTextStyle = {
+const connectTextStyle = {
     height: headerHeight,
     backgroundColor: '#d9d9d9',
     color: 'black',
@@ -20,12 +20,15 @@ const profileTextStyle = {
 };
 const paperStyles = {
     boxShadow: 3,
-    width: '70vw',
+    // width: '70vw',
     margin: '0 auto',
-    marginTop: 8,
+    // marginTop: 8,
+    paddingTop: '5vh',
+    paddingBottom: '15vh',
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    backgroundColor: "#e6e6e6",
 };
 const textAreaStyles = {
     width: '100%',
@@ -33,6 +36,7 @@ const textAreaStyles = {
     padding: '1rem',
     color: theme.palette.primary,
     fontFamily: theme.typography.fontFamily,
+    backgroundColor: '#e6e6e6'
 };
 const centered = {
     display: 'flex',
@@ -51,10 +55,10 @@ const Connect = () => {
   // const [validEmail, setValidEmail] = useState(true);
   // const [isButtonDisabled, setIsButtonDisabled] = useState(true); // Initially disabled
 
-  const innerFormStyles = {
+  const formStyles = {
     display: sent ? 'none' : 'flex',
     flexDirection: 'column',
-    width: '80%',
+    width: '50%',
   };
 
   // const handleEmailChange = (e) => {
@@ -108,7 +112,7 @@ const Connect = () => {
 
   const EmailForm = () => {
     return (
-      <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }} style={innerFormStyles}>
+      <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }} style={formStyles}>
         <TextField
           label="email"
           name="email"
@@ -162,9 +166,14 @@ const Connect = () => {
     );
   };
 
+  const socialsIconStyles = {
+    width: '10vw',
+    height: '10vh',
+  };
+
   const Socials = () => {
     return (
-      <Box style={{ display: "flex" }}>
+      <Box style={{ display: "flex", }}>
         <Tooltip title="LinkedIn">
           <IconButton
             color="primary"
@@ -198,14 +207,14 @@ const Connect = () => {
 
   return (
     <div id='connect'>
-      <Paper square style={profileTextStyle}>
+      <Paper square style={connectTextStyle}>
         <Box fontWeight='large'>
           <Typography variant='h3'>
             Connect
           </Typography>
         </Box>
       </Paper>
-      <Paper elevation={1} style={paperStyles}>
+      <Paper elevation={0} style={paperStyles}>
         <Typography component="h1" variant="h5" style={{ margin: '1rem 0' }}>
           Mail
         </Typography>
@@ -219,7 +228,6 @@ const Connect = () => {
         )}
         <Socials />
       </Paper>
-      <div style={{ height: '10vh' }} />
     </div>
   );
 };
