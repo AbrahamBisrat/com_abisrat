@@ -165,12 +165,7 @@ const Connect = () => {
       </Box>
     );
   };
-
-  const socialsIconStyles = {
-    width: '10vw',
-    height: '10vh',
-  };
-
+  
   const Socials = () => {
     return (
       <Box style={{ display: "flex", }}>
