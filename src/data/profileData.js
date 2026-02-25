@@ -1,7 +1,7 @@
 export const profile = {
   Name: "Abraham Bisrat",
   Titles: "Senior Software Engineer",
-  Locations: "Dallas TX",
+  Location: "Dallas TX",
 };
 
 export const avatar_src = "/images/avatar.jpg";
