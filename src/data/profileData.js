@@ -1,7 +1,6 @@
 export const profile = {
   Name: "Abraham Bisrat",
-  BirthDay: "Aug 25, 1997",
-  Titles: "Software Engineer",
+  Titles: "Senior Software Engineer",
   Locations: "Dallas TX",
 };
 
