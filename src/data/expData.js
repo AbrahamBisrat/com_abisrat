@@ -12,7 +12,7 @@ export const experiences = [
     imgSrc: "/logos/unnamedCompany.svg",
   },
   {
-    org: "Apple - contract",
+    org: "Advantis Global",
     title: "Java Engineer",
     date: "Aug 2022 - March 2023",
     desc: [
@@ -21,7 +21,7 @@ export const experiences = [
       "Lead migration of Java 11 to Java 17 migration team.",
     ],
     lang: ["Java", "Oracle Databases", "Kafka", "Cloud - Internal"],
-    imgSrc: "/logos/apple.svg",
+    imgSrc: "/logos/unnamedCompany.svg",
   },
   {
     org: "TWGC",
