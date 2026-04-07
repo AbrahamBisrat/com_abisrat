@@ -14,7 +14,7 @@ export const experiences = [
   {
     org: "Apple inc (contract)",
     title: "Java Engineer",
-    date: "Aug 2022 - March 2023",
+    date: "Feb 2022 - March 2023",
     desc: [
       "Geo expansion of services into Europe and South America.",
       "Deliver features with best practices and flexibility for future changes.",
